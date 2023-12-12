@@ -3,15 +3,11 @@ print("WELCOME TO THE GRANN'S PHONE DIRECTORY \n1.Add a record\n2.Search a recor
 x = int(input("Enter Your Choice: "))
 i=1
 while x!=6:
-   
     if x==1:
          a=input("Enter Name ")
          b=int(input(" Enter your 10-digit phone number: "))
          phoneDirectory.update({a:b})
 
-        
-  
-        
     elif x==2:
 
         c=(input("Which record do you want to search "))
@@ -28,13 +24,18 @@ while x!=6:
          print(phoneDirectory)
     
     elif x==4 :
-       z=phoneDirectory
-       phoneDirectory.sort(z)
-       print(phoneDirectory)
-         
-    elif x==5:
-          
+        if len (phoneDirectory)>=0:
+                     print("NO Record Found")
+        else:             
+         mydict=phoneDirectory
+         myKeys = list(phoneDirectory.keys())
 
+         myKeys.sort()
+         sorted_dict ={i:phoneDirectory[i] for i in myKeys}
+
+         print(sorted_dict)
+        
+    elif x==5:
      d=(input("What record do you want to delete "))
      if d in phoneDirectory:
              del phoneDirectory[d]
