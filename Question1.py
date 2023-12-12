@@ -20,11 +20,14 @@ while x!=6:
             
 
     elif x==3:
-       
-         m=input("Enter Name ")
-         n=int(input(" Enter your 10-digit phone number: "))
-         phoneDirectory.update({m:n})
-         print(phoneDirectory)
+         w= input("What do you want to update")
+         if w in phoneDirectory:
+              print("it already exits")
+         else:
+           m=input("Enter Name ")
+           n=int(input(" Enter your 10-digit phone number: "))
+           phoneDirectory.update({m:n})
+           print(phoneDirectory)
     
     elif x==4 :
     
