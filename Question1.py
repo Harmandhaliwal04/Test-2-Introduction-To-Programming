@@ -17,7 +17,7 @@ while x!=6:
         c=(input("Which record do you want to search "))
         if c in phoneDirectory:
             print(c,":",phoneDirectory[c])
-            print(phoneDirectory)
+           
         else:
             print("No Record here ")         
 
@@ -27,10 +27,11 @@ while x!=6:
          phoneDirectory.update({a:b})
          print(phoneDirectory)
     
-    elif x==4:
-         phoneDirectory.sort()
-         print(phoneDirectory)
-
+    elif x==4 :
+       z=phoneDirectory
+       phoneDirectory.sort(z)
+       print(phoneDirectory)
+         
     elif x==5:
           
 
