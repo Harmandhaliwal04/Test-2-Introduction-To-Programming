@@ -4,9 +4,10 @@ x = int(input("Enter Your Choice: "))
 i=1
 while x!=6:
     if x==1:
-         a=input("Enter Name ")
+         a=(input("Enter Name "))
          b=int(input(" Enter your 10-digit phone number: "))
          phoneDirectory.update({a:b})
+         
 
     elif x==2:
 
@@ -16,22 +17,22 @@ while x!=6:
            
         else:
             print("No Record here ")         
+            
 
     elif x==3:
-         a=input("Enter Name ")
-         b=int(input(" Enter your 10-digit phone number: "))
-         phoneDirectory.update({a:b})
+       
+         m=input("Enter Name ")
+         n=int(input(" Enter your 10-digit phone number: "))
+         phoneDirectory.update({m:n})
          print(phoneDirectory)
     
     elif x==4 :
-        if len (phoneDirectory)>=0:
-                     print("NO Record Found")
-        else:             
-         mydict=phoneDirectory
-         myKeys = list(phoneDirectory.keys())
+    
+        
+         Info = list(phoneDirectory.keys())
 
-         myKeys.sort()
-         sorted_dict ={i:phoneDirectory[i] for i in myKeys}
+         Info.sort()
+         sorted_dict ={i:phoneDirectory[i] for i in Info}
 
          print(sorted_dict)
         
